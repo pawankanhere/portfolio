@@ -1,9 +1,19 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Recursive } from "next/font/google";
+import localFont from "next/font/local";
 import "./globals.css";
 import Navbar from "./components/Navbar/Navbar";
 
-const inter = Inter({ subsets: ["latin"] });
+const recursive = localFont({
+  src: [
+    { path: "./fonts/Recursive_Regular.woff2", weight: "400", style: "normal" },
+    {
+      path: "./fonts/Recursive_bold.woff2",
+      weight: "700",
+      style: "normal",
+    },
+  ],
+});
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -17,9 +27,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>
-        <Navbar />
-        {children}
+      <body className={`${recursive.className}`}>
+        <div className="bg-gradient-to-t from-slate-800 to-slate-950  flex flex-col min-h-screen">
+          <Navbar />
+          {children}
+        </div>
       </body>
     </html>
   );

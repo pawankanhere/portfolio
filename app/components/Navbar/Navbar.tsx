@@ -2,7 +2,7 @@ import React from "react";
 
 const Navbar = () => {
   return (
-    <header className="flex w-full p-4">
+    <header className="flex w-full p-8 flex-grow-0 text-slate-50">
       <nav className="flex justify-between w-full items-center">
         <p>pk.</p>
         <div className="flex gap-4">
