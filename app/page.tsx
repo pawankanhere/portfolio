@@ -1,17 +1,28 @@
+import { twJoin } from "tailwind-merge";
 import GithubIcon from "./components/icons/GithubIcon";
 import InstagramIcon from "./components/icons/InstagramIcon";
 import LinkedinIcon from "./components/icons/LinkedinIcon";
+import H1 from "./components/headings/H2";
 
 export default function Home() {
   return (
     <main className="container mx-auto p-8 h-full flex-grow">
-      <h1 className="bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-cyan-300 text-[2.6rem] font-bold">
-        Hi, I am Pawan
-      </h1>
-      <p className="text-xl bg-clip-text text-transparent bg-gradient-to-r from-violet-400 to-slate-100 mt-2 font-bold">
+      <H1 className="lg:mt-4 xl:mt-6 2xl:mt-16">Hi, I am Pawan</H1>
+      <p
+        className={twJoin(
+          "sm:mt-4 md:mt-6 lg:mt-6 xl:mt-8 2xl:mt-8",
+          "text-xl sm:text-xl md:text-xl lg:text-xl xl:text-xl 2xl:text-3xl",
+          "bg-clip-text text-transparent bg-gradient-to-r from-violet-400 to-slate-100 mt-2 font-bold",
+        )}
+      >
         Full Stack Developer
       </p>
-      <p className="text-xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-slate-100">
+      <p
+        className={twJoin(
+          "text-xl sm:text-xl md:text-xl lg:text-xl xl:text-xl 2xl:text-3xl",
+          "bg-clip-text text-transparent bg-gradient-to-r from-violet-400 to-slate-100 mt-2 font-bold",
+        )}
+      >
         UI / UX Designer
       </p>
       <div className="flex gap-5 mt-8">
@@ -19,7 +30,11 @@ export default function Home() {
         <GithubIcon />
         <InstagramIcon />
       </div>
-      <p className="text-slate-300 mt-8 leading-6 text-sm">
+      <p
+        className={twJoin(
+          `text-slate-300 mt-8 leading-6 text-sm max-w-[620px]`,
+        )}
+      >
         Hey! I am Pawan Kanhere, a full-stack web developer with a passion for
         crafting pixel-perfect interfaces and seamless user experiences. My
         focus lies on the frontend, bringing ideas to life with code that&apos;s
