@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import { Recursive } from "next/font/google";
 import localFont from "next/font/local";
 import "./globals.css";
 import Navbar from "./components/Navbar/Navbar";
@@ -28,10 +27,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${recursive.className}`}>
-        <div className="bg-gradient-to-t from-slate-800 to-slate-950  flex flex-col min-h-screen">
-          <Navbar />
-          {children}
-        </div>
+        <div className="flex flex-col min-h-screen">{children}</div>
       </body>
     </html>
   );

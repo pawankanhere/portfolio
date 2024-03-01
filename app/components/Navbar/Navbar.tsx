@@ -4,8 +4,8 @@ import { twJoin } from "tailwind-merge";
 
 const Navbar = () => {
   return (
-    <header className="container mx-auto flex w-full p-8 flex-grow-0 text-slate-50">
-      <nav className="flex justify-between w-full items-center">
+    <header className="flex w-full p-8 flex-grow-0 text-slate-50 bg-slate-900">
+      <nav className="flex justify-between w-full items-center container mx-auto px-16">
         <p>pk.</p>
         <div className={twJoin("flex gap-2 2xl:gap-7")}>
           <Link legacyBehavior passHref href="/">
