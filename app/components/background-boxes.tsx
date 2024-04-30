@@ -18,7 +18,19 @@ export const BoxesCore = ({ className, ...rest }: { className?: string }) => {
   //   "--violet-300",
   // ];
 
-  let colors = ["--slate-700", "--slate-600", "--slate-500"];
+  let colors = [
+    "--sky-800",
+    "--pink-800",
+    "--green-800",
+    "--yellow-800",
+    "--red-800",
+    "--purple-800",
+    "--blue-800",
+    "--indigo-800",
+    "--violet-800",
+  ];
+
+  // let colors = ["--slate-700", "--slate-600", "--slate-500"];
 
   const getRandomColor = () => {
     return colors[Math.floor(Math.random() * colors.length)];
@@ -50,9 +62,9 @@ export const BoxesCore = ({ className, ...rest }: { className?: string }) => {
                 transition: { duration: 2 },
               }}
               key={`col` + j}
-              className="w-16 h-16 rounded-xl  border-r border-t border-slate-700 relative"
+              className="w-8 h-8 border-r border-t border-slate-800 relative"
             >
-              {j % 2 === 0 && i % 2 === 0 ? (
+              {j % 4 === 0 && i % 4 === 0 ? (
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   fill="none"

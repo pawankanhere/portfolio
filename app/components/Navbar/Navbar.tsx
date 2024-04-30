@@ -35,11 +35,11 @@ const Navbar = () => {
   ];
   const [selected, setSelected] = useState<Link>(links[0]);
   return (
-    <header className="flex justify-between w-full p-8 flex-grow-0 text-slate-50 bg-slate-900">
+    <header className="flex justify-between w-full p-8 flex-grow-0 bg-black">
       <nav
         className={twJoin(
           "px-8 2xl:px-16",
-          `flex justify-between w-full items-center container mx-auto px-16`,
+          `flex justify-between w-full items-center container mx-auto px-16 text-white`,
         )}
       >
         <p>pk.</p>
