@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
+import { Inter } from "next/font/google";
+import LayoutContainer from "./components/ui/layout-container";
 
 const recursive = localFont({
   src: [
@@ -12,6 +14,8 @@ const recursive = localFont({
     },
   ],
 });
+
+const inter = Inter({ subsets: ["latin"], display: "swap" });
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -25,8 +29,8 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${recursive.className}`}>
-        <div className="flex flex-col min-h-screen">{children}</div>
+      <body className={`${inter.className}`}>
+        <LayoutContainer>{children}</LayoutContainer>
       </body>
     </html>
   );

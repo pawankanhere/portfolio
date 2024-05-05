@@ -14,6 +14,9 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      colors: {
+        primary: colors.blue,
+      },
       animation: {
         "meteor-effect": "meteor 5s linear infinite",
       },

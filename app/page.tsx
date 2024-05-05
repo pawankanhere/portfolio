@@ -1,21 +1,22 @@
-import Navbar from "./components/Navbar/Navbar";
-import LandingSection from "./components/LandingSection/LandingSection";
-import JourneySection from "./components/JourneySection/JourneySection";
-import SkillsSection from "./components/SkillsSection/SkillsSection";
-import ProjectsSection from "./components/ProjectsSection/ProjectsSection";
+"use client";
+
+import Intro from "./components/views/intro";
+import Experience from "./components/views/experience";
+import Skills from "./components/views/skills";
+import Contact from "./components/views/contact";
+import PageContainer from "./components/ui/page-container";
+import AnimatedSeparator from "./components/ui/animated-separator";
 
 export default function Home() {
   return (
-    <>
-      <main className="flex-grow relative">
-        <div className="h-screen">
-          <LandingSection />
-          <JourneySection />
-          <SkillsSection />
-          <ProjectsSection />
-        </div>
-      </main>
-      <div />
-    </>
+    <PageContainer>
+      <Intro />
+      <AnimatedSeparator />
+      <Experience />
+      <AnimatedSeparator />
+      <Skills />
+      <AnimatedSeparator />
+      <Contact />
+    </PageContainer>
   );
 }
