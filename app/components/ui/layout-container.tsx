@@ -17,9 +17,9 @@ const LayoutContainer = ({ children }: LayoutContainerProps) => {
         "lg:min-h-screen lg:grid lg:[grid-template-columns:1fr_1fr]",
       )}
     >
-      {/* <GradientBackground */}
-      {/*   className={twJoin("h-screen fixed w-[200px]", "lg:fixed lg:w-1/4")} */}
-      {/* /> */}
+      <GradientBackground
+        className={twJoin("h-screen fixed w-[200px]", "lg:fixed lg:w-1/4")}
+      />
       <div
         className={twJoin(
           "flex items-center justify-center pl-10 bg-slate-950 bg-grid-slate-600/20 [mask-image:radial-gradient(black_75%,transparent_100%)]",
