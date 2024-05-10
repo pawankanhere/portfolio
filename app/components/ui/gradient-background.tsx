@@ -18,7 +18,7 @@ const GradientBackground = ({
   className,
 }: GradientBackgroundProps) => {
   const color = useMotionValue(COLORS[0]);
-  const backgroundGradient = useMotionTemplate`radial-gradient(circle at 80%, #fff 80%, ${color} 100%)`;
+  const backgroundGradient = useMotionTemplate`radial-gradient(circle at 100%, #fff 10%, ${color} 100%)`;
 
   useEffect(() => {
     animate(color, COLORS, {
@@ -30,7 +30,7 @@ const GradientBackground = ({
   }, [color]);
   return (
     <motion.div
-      style={{ background: backgroundGradient }}
+      style={{ backgroundImage: backgroundGradient }}
       className={twMerge(`${className}`)}
     >
       {children}

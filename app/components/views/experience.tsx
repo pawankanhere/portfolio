@@ -2,6 +2,7 @@ import React from "react";
 import { SectionHeading } from "../ui/section-heading";
 import Text from "../ui/text";
 import Company from "../ui/company";
+import { twJoin } from "tailwind-merge";
 
 const Experience = () => {
   return (
@@ -30,21 +31,21 @@ const Experience = () => {
       />
 
       {/* HR Experience*/}
-      <div className="mt-20 w-2/3">
-        <Text className="text-slate-800 font-medium">Previous Experiences</Text>
-        <Text className="mt-2">
-          Lorem ipsum dolor sit amet, qui minim labore adipisicing minim sint
-          cillum sint consectetur cupidatat.
+      <div className={twJoin("mt-20 lg:w-2/3")}>
+        <Text className="font-medium">Previous Experiences</Text>
+        <Text size="small" className="mt-2 text-slate-400">
+          I started my career as a HR professional and then later I decided to
+          follow my passion and made a switch to IT Industry as a developer.
         </Text>
-        <div className="flex items-center gap-4 mt-4">
-          <p className="font-semibold text-zinc-800 tracking-tight text-base">
-            PIX Transmission Ltd
-          </p>
-          <p className="text-sm text-zinc-600 mt-0.5">Feb 2016 - May 2019</p>
+        <div className="flex items-center gap-4 mt-10">
+          <Text>PIX Transmission Ltd</Text>
+          <Text size="small" className="mt-0.5">
+            Feb 2016 - May 2019
+          </Text>
         </div>
       </div>
       <div className="mt-8">
-        <button className="text-sm underline underline-offset-4 decoration-zinc-300 hover:decoration-2 text-zinc-800 font-medium flex items-center gap-1">
+        <button className="text-sm underline underline-offset-4 decoration-zinc-300 hover:decoration-2 text-slate-300 font-medium flex items-center gap-1">
           View Full Resume
           <svg
             xmlns="http://www.w3.org/2000/svg"

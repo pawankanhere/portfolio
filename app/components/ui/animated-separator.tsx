@@ -1,17 +1,45 @@
-import React from "react";
+"use client";
+
+import { animate, useMotionTemplate, useMotionValue } from "framer-motion";
+import React, { useEffect } from "react";
+import { COLORS } from "./gradient-background";
+import { motion } from "framer-motion";
 
 const AnimatedSeparator = () => {
+  const color = useMotionValue(COLORS[0]);
+  const backgroundImageFaded = useMotionTemplate`linear-gradient(90deg,rgba(56,189,248,0) 0%,${color} 32.29%,#2563eb91 67.19%,rgba(236,72,153,0) 100%)`;
+
+  useEffect(() => {
+    animate(color, COLORS, {
+      ease: "easeInOut",
+      duration: 10,
+      repeat: Infinity,
+      repeatType: "mirror",
+    });
+  }, [color]);
+
   return (
     <div className="relative">
-      <div className="absolute w-80 flex h-0.5 ml-10">
-        <div
-          className={`w-full flex-none blur-sm [background-image:linear-gradient(90deg,rgba(56,189,248,0)_0%,#3ee90e_32.29%,#2563eb91_67.19%,rgba(236,72,153,0)_100%)]`}
+      <div className="absolute top-[-2px] w-96 flex h-1 ml-1">
+        <motion.div
+          style={{
+            backgroundImage: backgroundImageFaded,
+          }}
+          className={`w-full flex-none blur-sm`}
         />
-        <div
-          className={`-ml-[100%] w-full flex-none blur-[1px] [background-image:linear-gradient(90deg,rgba(56,189,248,0)_0%,#3ee90e_32.29%,#2563eb91_67.19%,rgba(236,72,153,0)_100%)]`}
+        <motion.div
+          style={{
+            backgroundImage: backgroundImageFaded,
+          }}
+          className={`-ml-[100%] w-full flex-none blur-[1px]`}
         />
       </div>
-      <div className="my-20 h-px w-full bg-zinc-300 bg-gradient-to-r from-zinc-300 via-zinc-200 to-white" />
+      <motion.div
+        style={{
+          backgroundImage: backgroundImageFaded,
+        }}
+        className="my-20 h-px w-full -ml-20"
+      />
     </div>
   );
 };

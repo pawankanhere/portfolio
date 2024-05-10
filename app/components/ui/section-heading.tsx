@@ -16,7 +16,7 @@ export const SectionHeading = ({
   return (
     <h3
       className={twMerge(
-        `font-medium tracking-tight text-xl text-slate-400 ${className}`,
+        `font-medium tracking-tight text-xl text-slate-100 ${className}`,
       )}
     >
       {children}
