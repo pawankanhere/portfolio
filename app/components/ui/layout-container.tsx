@@ -18,7 +18,10 @@ const LayoutContainer = ({ children }: LayoutContainerProps) => {
       )}
     >
       <GradientBackground
-        className={twJoin("h-screen fixed w-[200px]", "lg:fixed lg:w-1/4")}
+        className={twJoin(
+          "h-screen hidden fixed w-[200px]",
+          "lg:fixed lg:w-1/4",
+        )}
       />
       <div
         className={twJoin(
