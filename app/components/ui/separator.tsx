@@ -1,11 +1,12 @@
 import React from "react";
+import { twJoin } from "tailwind-merge";
 
 const Separator = () => {
   // const primaryColor = "rgba(56,189,248,0)";
   // const secondaryColor = "#0EA5E9";
 
   return (
-    <div className="relative">
+    <div className={twJoin("relative", "lg:hidden")}>
       <div className="absolute w-80 flex h-0.5 ml-10">
         <div
           className={`w-full flex-none blur-sm [background-image:linear-gradient(90deg,rgba(56,189,248,0)_0%,#3ee90e_32.29%,#2563eb91_67.19%,rgba(236,72,153,0)_100%)]`}

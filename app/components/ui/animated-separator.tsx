@@ -4,6 +4,7 @@ import { animate, useMotionTemplate, useMotionValue } from "framer-motion";
 import React, { useEffect } from "react";
 import { COLORS } from "./gradient-background";
 import { motion } from "framer-motion";
+import { twJoin } from "tailwind-merge";
 
 const AnimatedSeparator = () => {
   const color = useMotionValue(COLORS[0]);
@@ -19,7 +20,7 @@ const AnimatedSeparator = () => {
   }, [color]);
 
   return (
-    <div className="relative">
+    <div className={twJoin("[display:none]", "lg:relative")}>
       <div className="absolute top-[-2px] w-96 flex h-1 ml-1">
         <motion.div
           style={{

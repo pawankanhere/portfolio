@@ -12,7 +12,9 @@ import { twJoin } from "tailwind-merge";
 const SideNavigation = () => {
   return (
     <>
-      <Meteors number={20} />
+      <div className={twJoin("hidden", "lg:block")}>
+        <Meteors number={20} />
+      </div>
       <nav
         className={twJoin(
           "relative z-20",
