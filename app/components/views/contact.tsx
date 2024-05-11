@@ -9,14 +9,17 @@ const Contact = () => {
       <SectionHeading>Contact Me</SectionHeading>
       <Text>Feel free to drop me an email</Text>
 
-      <p className="mt-5 text-zinc-800 font-medium flex gap-2 items-center">
+      <Text
+        size="medium"
+        className="mt-5 text-slate-200 font-medium flex gap-2 items-center"
+      >
         <svg
           xmlns="http://www.w3.org/2000/svg"
           fill="none"
           viewBox="0 0 24 24"
           strokeWidth={1.5}
           stroke="currentColor"
-          className="w-5 h-5 stroke-2 text-zinc-600"
+          className="w-5 h-5 stroke-2 text-slate-400"
         >
           <path
             strokeLinecap="round"
@@ -25,11 +28,11 @@ const Contact = () => {
           />
         </svg>
         kanherepawan@gmail.com
-      </p>
+      </Text>
       <div className="mt-5">
-        <p className="font-medium text-zinc-800 tracking-tight">Social Media</p>
+        <Text className="font-medium text-slate-500">Social Media</Text>
         <Text>Connect with me :)</Text>
-        <div className="mt-4 space-y-2 w-fit">
+        <div className="mt-4 space-y-2 w-fit text-slate-400">
           {["LinkedIn", "Twitter", "Github"].map((social) => (
             <Link
               href="/"

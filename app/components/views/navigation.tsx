@@ -9,7 +9,7 @@ import {
 import { Meteors } from "../meteors";
 import { twJoin } from "tailwind-merge";
 
-const SideNavigation = () => {
+const Navigation = () => {
   return (
     <>
       <div className={twJoin("hidden", "lg:block")}>
@@ -18,7 +18,8 @@ const SideNavigation = () => {
       <nav
         className={twJoin(
           "relative z-20",
-          `lg:p-10 lg:mb-20 lg:ml-[12%] lg:rounded-[50px]`,
+          "lg:p-0 lg:mb-20 lg:ml-[2%] lg:rounded-[50px]",
+          "xl:p-10 xl:mb-20 xl:ml-[12%]",
         )}
       >
         <div>
@@ -33,7 +34,13 @@ const SideNavigation = () => {
           <Text className={twJoin("mt-2", `lg:font-semibold`)}>
             Full Stack Developer
           </Text>
-          <Text className={twJoin("mt-4 w-[80%]", `lg:w-[56ch] lg:mt-4`)}>
+          <Text
+            className={twJoin(
+              "mt-4 w-[80%]",
+              "lg:w-[40ch] lg:mt-4",
+              "xl:w-[56ch] xl:mt-4",
+            )}
+          >
             Crafting seamless digital experiences from frontend finesse to
             backend brilliance.
           </Text>
@@ -67,4 +74,4 @@ const SideNavigation = () => {
   );
 };
 
-export default SideNavigation;
+export default Navigation;
