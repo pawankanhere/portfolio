@@ -6,7 +6,7 @@ type CompanyProps = {
   company: string;
   companyDescription: string;
   designation: string;
-  roleDescription: string;
+  roleDescription: string | React.ReactNode;
   duration: string;
   className?: string;
 };
@@ -32,7 +32,7 @@ const Company = ({
       </Text>
       <div className={twJoin("mt-10", "lg:mt-10 lg:w-2/3")}>
         <Text className="text-slate-300 font-medium">My Role</Text>
-        <Text className="mt-2 text-slate-400">{roleDescription}</Text>
+        <div className="mt-2 text-slate-400">{roleDescription}</div>
       </div>
     </div>
   );

@@ -12,7 +12,7 @@ const textVariants = cva([`tracking-tight font-normal text-slate-300`], {
   variants: {
     size: {
       small: "text-sm",
-      medium: ["text-base", "sm:text-base", "lg:text-[18px] lg:leading-7"],
+      medium: ["text-base", "sm:text-base", "lg:text-[16px] lg:leading-7"],
       large: "text-[26px] leading-9",
     },
   },

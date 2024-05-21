@@ -5,19 +5,21 @@ import { twJoin } from "tailwind-merge";
 
 const Intro = () => {
   return (
-    <div className={twJoin("pb-20", "lg:w-2/3")}>
+    <div className={twJoin("lg:w-2/3 lg:pb-20")}>
       <SectionHeading>Intro</SectionHeading>
       <Text
         size="large"
-        className="mt-4 tracking-[-0.03em] font-medium text-slate-300"
+        className="mt-4 tracking-[-0.02em] font-medium text-slate-300"
       >
-        Hello there, I am Pawan Kanhere. I am passionate about building software
-        which makes users happy. I have started my professional journey a decade
-        back and have experiences of different industries Currently working at{" "}
+        Hey! I&apos;m Pawan Kanhere, and my passion lies in building software
+        that delights users. My journey started a decade ago in HR, but in 2019,
+        I pivoted into the exciting world of IT, embarking on a fulfilling path
+        as a developer. Right now, I&apos;m wearing the hat of a Full Stack
+        Developer at{" "}
         <span className="text-white font-medium underline underline-offset-4 decoration-primary-400 decoration-2">
           Konverge AI
-        </span>{" "}
-        as a Full Stack Developer.
+        </span>
+        .
       </Text>
     </div>
   );

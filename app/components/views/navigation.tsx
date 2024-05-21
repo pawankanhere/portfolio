@@ -12,7 +12,7 @@ import { twJoin } from "tailwind-merge";
 const Navigation = () => {
   return (
     <>
-      <div className={twJoin("hidden", "lg:block")}>
+      <div className={twJoin("[display:none]", "lg:block")}>
         <Meteors number={20} />
       </div>
       <nav
@@ -25,13 +25,16 @@ const Navigation = () => {
         <div>
           <h2
             className={twJoin(
-              "text-4xl tracking-tight font-bold text-slate-300",
-              `lg:text-[56px] lg:tracking-[-0.06em] 100 lg:-ml-0.5`,
+              "text-4xl tracking-tight font-bold text-slate-100",
+              `lg:text-[64px] lg:tracking-[-0.06em] lg:font-medium lg:-ml-0.5`,
             )}
           >
             Pawan Kanhere
           </h2>
-          <Text className={twJoin("mt-2", `lg:font-semibold`)}>
+          <Text
+            size="large"
+            className={twJoin("mt-2", "lg:font-semibold lg:mt-6")}
+          >
             Full Stack Developer
           </Text>
           <Text

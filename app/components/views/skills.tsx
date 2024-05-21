@@ -25,7 +25,9 @@ const Skills = () => {
   return (
     <div className={twJoin("lg:w-2/3 mt-20")}>
       <SectionHeading>Skills</SectionHeading>
-      <Text>Things I have worked on during my career</Text>
+      <Text className="text-slate-400">
+        Things I have worked on during my career
+      </Text>
       <div className="grid grid-cols-2 gap-8 mt-6">
         {technologies.map((technology) => (
           <div key={technology.heading} className="mt-6 flex flex-col gap-3">
