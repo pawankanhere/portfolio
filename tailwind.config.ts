@@ -1,10 +1,8 @@
-import type { Config } from "tailwindcss";
-const defaultTheme = require("tailwindcss/defaultTheme");
-const svgToDataUri = require("mini-svg-data-uri");
-const colors = require("tailwindcss/colors");
-const {
-  default: flattenColorPalette,
-} = require("tailwindcss/lib/util/flattenColorPalette");
+import type { Config } from "tailwindcss"
+const defaultTheme = require("tailwindcss/defaultTheme")
+const svgToDataUri = require("mini-svg-data-uri")
+const colors = require("tailwindcss/colors")
+const { default: flattenColorPalette } = require("tailwindcss/lib/util/flattenColorPalette")
 
 const config: Config = {
   content: [
@@ -32,8 +30,7 @@ const config: Config = {
       },
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
-        "gradient-conic":
-          "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
+        "gradient-conic": "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
       },
     },
   },
@@ -62,20 +59,18 @@ const config: Config = {
           values: flattenColorPalette(theme("backgroundColor")),
           type: "color",
         },
-      );
+      )
     },
   ],
-};
+}
 
 function addVariablesForColors({ addBase, theme }: any) {
-  let allColors = flattenColorPalette(theme("colors"));
-  let newVars = Object.fromEntries(
-    Object.entries(allColors).map(([key, val]) => [`--${key}`, val]),
-  );
+  let allColors = flattenColorPalette(theme("colors"))
+  let newVars = Object.fromEntries(Object.entries(allColors).map(([key, val]) => [`--${key}`, val]))
 
   addBase({
     ":root": newVars,
-  });
+  })
 }
 
-export default config;
+export default config

@@ -1,12 +1,13 @@
-import { cva } from "class-variance-authority";
-import React from "react";
-import { twMerge } from "tailwind-merge";
+import { cva } from "class-variance-authority"
+import React from "react"
+import { motion } from "framer-motion"
+import { twMerge } from "tailwind-merge"
 
 type TextProps = {
-  children: React.ReactNode;
-  className?: string;
-  size?: "small" | "medium" | "large";
-};
+  children: React.ReactNode
+  className?: string
+  size?: "small" | "medium" | "large"
+}
 
 const textVariants = cva([`tracking-tight font-normal text-slate-300`], {
   variants: {
@@ -19,14 +20,13 @@ const textVariants = cva([`tracking-tight font-normal text-slate-300`], {
   defaultVariants: {
     size: "medium",
   },
-});
-const Text = ({ children, className, size = "medium" }: TextProps) => {
-  const Comp = `p`;
+})
+const Text = ({ children, className, size = "medium", ...props }: TextProps) => {
   return (
-    <Comp className={twMerge(textVariants({ size }), className)}>
+    <motion.p {...props} className={twMerge(textVariants({ size }), className)}>
       {children}
-    </Comp>
-  );
-};
+    </motion.p>
+  )
+}
 
-export default Text;
+export default Text

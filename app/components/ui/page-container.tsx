@@ -1,11 +1,11 @@
-import { Stars } from "@react-three/drei";
-import { Canvas } from "@react-three/fiber";
-import React from "react";
-import { twJoin } from "tailwind-merge";
+import { Stars } from "@react-three/drei"
+import { Canvas } from "@react-three/fiber"
+import React from "react"
+import { twJoin } from "tailwind-merge"
 
 type PageContainerProps = {
-  children: React.ReactNode;
-};
+  children: React.ReactNode
+}
 const PageContainer = ({ children }: PageContainerProps) => {
   return (
     <div className="h-full px-10 pt-44">
@@ -16,7 +16,7 @@ const PageContainer = ({ children }: PageContainerProps) => {
       </div>
       {children}
     </div>
-  );
-};
+  )
+}
 
-export default PageContainer;
+export default PageContainer

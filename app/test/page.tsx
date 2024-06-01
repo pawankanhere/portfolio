@@ -1,4 +1,4 @@
-import React from "react";
+import React from "react"
 
 const Test = () => {
   return (
@@ -12,29 +12,22 @@ const Test = () => {
                 <div className="w-full flex-none blur-sm [background-image:linear-gradient(90deg,rgba(56,189,248,0)_0%,#0EA5E9_32.29%,rgba(236,72,153,0.3)_67.19%,rgba(236,72,153,0)_100%)]" />
                 <div className="-ml-[100%] w-full flex-none blur-[1px] [background-image:linear-gradient(90deg,rgba(56,189,248,0)_0%,#0EA5E9_32.29%,rgba(236,72,153,0.3)_67.19%,rgba(236,72,153,0)_100%)]" />
               </div>
-              <h1 className="text-slate-200 text-4xl tracking-tight font-bold">
-                Hello world
-              </h1>
+              <h1 className="text-slate-200 text-4xl tracking-tight font-bold">Hello world</h1>
               <p className="mt-3 w-[900px]">
-                Lorem ipsum dolor sit amet, officia excepteur ex fugiat
-                reprehenderit enim labore culpa sint ad nisi Lorem pariatur
-                mollit ex esse exercitation amet. Nisi anim cupidatat excepteur
-                officia. Reprehenderit nostrud nostrud ipsum Lorem est aliquip
-                amet voluptate voluptate dolor minim nulla est proident. Nostrud
-                officia pariatur ut officia. Sit irure elit esse ea nulla sunt
-                ex occaecat reprehenderit commodo officia dolor Lorem duis
-                laboris cupidatat officia voluptate. Culpa proident adipisicing
-                id nulla nisi laboris ex in Lorem sunt duis officia eiusmod.
-                Aliqua reprehenderit commodo ex non excepteur duis sunt velit
-                enim. Voluptate laboris sint cupidatat ullamco ut ea consectetur
-                et est culpa et culpa duis.
+                Lorem ipsum dolor sit amet, officia excepteur ex fugiat reprehenderit enim labore culpa sint ad nisi
+                Lorem pariatur mollit ex esse exercitation amet. Nisi anim cupidatat excepteur officia. Reprehenderit
+                nostrud nostrud ipsum Lorem est aliquip amet voluptate voluptate dolor minim nulla est proident. Nostrud
+                officia pariatur ut officia. Sit irure elit esse ea nulla sunt ex occaecat reprehenderit commodo officia
+                dolor Lorem duis laboris cupidatat officia voluptate. Culpa proident adipisicing id nulla nisi laboris
+                ex in Lorem sunt duis officia eiusmod. Aliqua reprehenderit commodo ex non excepteur duis sunt velit
+                enim. Voluptate laboris sint cupidatat ullamco ut ea consectetur et est culpa et culpa duis.
               </p>
             </div>
           </div>
         </div>
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default Test;
+export default Test

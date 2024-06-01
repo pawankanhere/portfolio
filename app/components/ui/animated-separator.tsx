@@ -1,14 +1,15 @@
-"use client";
+"use client"
 
-import { animate, useMotionTemplate, useMotionValue } from "framer-motion";
-import React, { useEffect } from "react";
-import { COLORS } from "./gradient-background";
-import { motion } from "framer-motion";
-import { twJoin } from "tailwind-merge";
+import { animate, useMotionTemplate, useMotionValue } from "framer-motion"
+import React, { useEffect } from "react"
+import { COLORS } from "./gradient-background"
+import { motion } from "framer-motion"
+import { twJoin } from "tailwind-merge"
+import { slideAnimation } from "app/utils/animation"
 
 const AnimatedSeparator = () => {
-  const color = useMotionValue(COLORS[0]);
-  const backgroundImageFaded = useMotionTemplate`linear-gradient(90deg,rgba(56,189,248,0) 0%,${color} 32.29%,#2563eb91 67.19%,rgba(236,72,153,0) 100%)`;
+  const color = useMotionValue(COLORS[0])
+  const backgroundImageFaded = useMotionTemplate`linear-gradient(90deg,rgba(56,189,248,0) 0%,${color} 32.29%,#2563eb91 67.19%,rgba(236,72,153,0) 100%)`
 
   useEffect(() => {
     animate(color, COLORS, {
@@ -16,11 +17,11 @@ const AnimatedSeparator = () => {
       duration: 10,
       repeat: Infinity,
       repeatType: "mirror",
-    });
-  }, [color]);
+    })
+  }, [color])
 
   return (
-    <div className={twJoin("[display:none]", "lg:relative")}>
+    <motion.div {...slideAnimation()} className={twJoin("hidden", "lg:relative lg:block")}>
       <div className="absolute top-[-2px] w-96 flex h-1 ml-1">
         <motion.div
           style={{
@@ -41,8 +42,8 @@ const AnimatedSeparator = () => {
         }}
         className="my-20 h-px w-full -ml-20"
       />
-    </div>
-  );
-};
+    </motion.div>
+  )
+}
 
-export default AnimatedSeparator;
+export default AnimatedSeparator

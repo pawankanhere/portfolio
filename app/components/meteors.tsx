@@ -1,14 +1,8 @@
-import { cn } from "../utils/cn";
-import React from "react";
+import { cn } from "../utils/cn"
+import React from "react"
 
-export const Meteors = ({
-  number,
-  className,
-}: {
-  number?: number;
-  className?: string;
-}) => {
-  const meteors = new Array(number || 20).fill(true);
+export const Meteors = ({ number, className }: { number?: number; className?: string }) => {
+  const meteors = new Array(number || 20).fill(true)
   return (
     <>
       {meteors.map((el, idx) => (
@@ -28,8 +22,8 @@ export const Meteors = ({
         ></span>
       ))}
     </>
-  );
-};
+  )
+}
 
 // default code
 // "before:content-[''] before:absolute before:top-1/2 before:transform before:-translate-y-[50%] before:w-[50px] before:h-[1px] before:bg-gradient-to-r before:from-[#64748b] before:to-transparent",
