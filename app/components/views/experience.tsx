@@ -1,4 +1,5 @@
 import React from "react"
+import Link from "next/link"
 import { SectionHeading } from "../ui/section-heading"
 import Text from "../ui/text"
 import Company from "../ui/company"
@@ -6,6 +7,8 @@ import { twJoin } from "tailwind-merge"
 import { motion } from "framer-motion"
 import { slideAnimation } from "app/utils/animation"
 import { ArrowUpRightIcon } from "@heroicons/react/24/outline"
+
+const MotionLink = motion(Link)
 
 const Experience = () => {
   return (
@@ -81,7 +84,7 @@ const Experience = () => {
         </motion.div>
       </motion.div>
       <motion.div {...slideAnimation("container")} className="mt-8 w-fit">
-        <motion.a
+        <MotionLink
           {...slideAnimation("item")}
           href="/resume.pdf"
           target="_blank"
@@ -92,7 +95,7 @@ const Experience = () => {
         >
           View Full Resume
           <ArrowUpRightIcon className="w-3 h-3 stroke-2 transform rotate-1" />
-        </motion.a>
+        </MotionLink>
       </motion.div>
     </div>
   )
