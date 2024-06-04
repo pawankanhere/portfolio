@@ -7,6 +7,7 @@ import PageContainer from "./components/ui/page-container"
 import AnimatedSeparator from "./components/ui/animated-separator"
 import Separator from "./components/ui/separator"
 import Contact from "./components/views/contact"
+import Footer from "./components/views/footer"
 
 export default function Home() {
   return (
@@ -22,6 +23,7 @@ export default function Home() {
         <Separator />
         <AnimatedSeparator />
         <Contact />
+        <Footer />
       </PageContainer>
     </>
   )
